@@ -8,7 +8,7 @@ while(not end):
 
     if num == '':
         end = True
-    elif num.isnumeric():
+    elif num.isnumeric(): # Verificamos se é um  número, e colocamos no array nums.
         nums.append(int(num))
     else:
         print("Apenas números.")

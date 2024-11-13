@@ -8,11 +8,11 @@ while(not end):
 
     if num == '':
         end = True
-    elif num.isnumeric():
+    elif num.isnumeric(): # Verificamos se é um número e colocamos no array
         nums.append(int(num))
     else:
         print("Apenas números.")
 
-nums.sort()
+nums.sort() # Ordenamos on no array
 print(f"Os números em ordem crescente: {nums}")
 

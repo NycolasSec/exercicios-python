@@ -7,6 +7,7 @@ def conta_vogais(string):
     vogais = 'aeiou'
     for i in vogais:
         if i in string:
+            # Conta quantas vogais tem na string
             result[i] = string.count(i)
     return result
 

@@ -5,14 +5,14 @@ clientes = {}
 
 def show_clientes():
     for i in clientes.keys():
-        print(f"\n- Cliente: {i}"
+        print(f"\n- Cliente: {i}" # Imprime o dicionário clientes, de forma formatada
               f"\nSexo: {clientes[i]['sexo']}"
               f"\nIdade: {clientes[i]['idade']}")
 
 def ad_cliente():
     # Nome do cliente
     nome = input(f"Qual o nome do cliente? ")
-    while nome in clientes.keys() or nome == '':
+    while nome in clientes.keys() or nome == '': # Verifica se o cliente já existe
         nome = input("Esse cliente já existe ou nulo. Crie com outro nome\n: ")
 
     # Sexo do cliente
@@ -33,7 +33,7 @@ def ad_cliente():
     while not idade.isnumeric():
         idade = input("Idade precisa ser um número\n: ")
     int(idade)
-    clientes[nome] = {'sexo':sexo, 'idade':idade}
+    clientes[nome] = {'sexo':sexo, 'idade':idade} # Adiciona mais um elemento no dicionário
 
 def del_cliente():
     nome = input(f"Qual o nome do cliente a ser deletado?\n: ")
@@ -53,6 +53,7 @@ while not end:
     while not act.isnumeric() or not (0 <= int(act) <= 2):
         act = input("Digite alguma opção válida\n: ")
 
+    # Verifica a ação a ser tomada
     if act == "0":
         show_clientes()
     elif act == "1":

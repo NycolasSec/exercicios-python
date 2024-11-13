@@ -1,14 +1,16 @@
 from random import randint
 import random
 
+# Definimos o que a nossa senha irá conter
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 symbols = ['!', '@', '#', '$', '%', '&', '*']
-# n_random = randint(0,9)
 
 def passwords(level: int):
     password = ''
 
+    # Testamos qual nível foi escolhido
+    # Quanto mais alto o nível, mais coisas incrementamos na senha
     if level == 0:
         for i in range(4):
             password += random.choice(letters)
@@ -34,7 +36,7 @@ while True:
     print("Qual o nível da senha que você quer gerar ?")
     level = input("[0] - Fraca\n[1] - Média\n[2] - Forte\n: ")
 
-    while not level.isnumeric() or (int(level) < 0 or int(level) > 2):
+    while not level.isnumeric() or (int(level) < 0 or int(level) > 2): # Verifica se foi digitado o nivel, corretamente
         print("O nível tem de ser um número!!!\n")
         print("Qual o nível da senha que você quer gerar ?")
         level = input("[0] - Fraca\n[1] - Média\n[2] - Forte\n: ")
