@@ -4,7 +4,7 @@ nums = []
 end = False
 
 while(not end):
-    num = input("Qual o número: ")
+    num = input("Qual o número: ") # pegamos o input do usuàrio
 
     if num == '':
         end = True

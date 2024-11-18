@@ -4,15 +4,15 @@ nums = []
 end = False
 
 while(not end):
-    num = input("Qual o número: ")
+    num = input("Qual o número: ") # Armazena o input do usuário
 
     if num == '':
         end = True
-    elif num.isnumeric(): # Verificamos se é um número e colocamos no array
-        nums.append(int(num))
+    elif num.isnumeric(): # Verificamos se é um nùmero
+        nums.append(int(num)) # onvertemos em inteiro e colocamos no array
     else:
         print("Apenas números.")
 
-nums.sort() # Ordenamos on no array
+nums.sort() # Ordenamos o array
 print(f"Os números em ordem crescente: {nums}")
 

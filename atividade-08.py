@@ -5,7 +5,7 @@ while True:
     num_random = randint(0, 9)
 
     print("Pensei em um número entre 0 e 10, tente adivinhá-lo:")
-    num_user = int(input())
+    num_user = int(input()) # Converte o imput do usuário em inteiro
 
     # Verifica se houve um erro ou acerto
     res = "Acertou" if num_user == num_random else "Errou"

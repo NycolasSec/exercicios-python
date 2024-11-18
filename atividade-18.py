@@ -10,7 +10,7 @@ while not end:
 
     while not str(n_vez).isnumeric() or int(n_vez) < 1: # Verifica se foi digitado um número correto
         print("\nPrecisa ser um número e maior do que um !!!\n")
-        n_vez = input("Digite quantas vezes pretende jogar o dado: ")
+        n_vez = input("Digite quantas vezes pretende jogar o dado: ") # coleta o numero de vezes que iremos jogar os dados
 
     n_vez = int (n_vez)
 

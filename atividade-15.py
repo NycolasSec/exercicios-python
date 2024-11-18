@@ -13,7 +13,7 @@ for i in range(2,100): # Range de 2 até 101
     while not end:
         prod = prod - 1 # Decrementamos para ser testado na divisão
         if prod == 1 and div == 0: # Testa se o número não tem nenhum divisor.
-            primos.append(i)
+            primos.append(i) # Adiciona o valor de i no array
             end = True
         elif prod == 1:
             end = True

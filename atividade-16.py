@@ -20,8 +20,11 @@ end = False
 while not end:
     print("\n\n----- ----- -----")
 
-    print(f"Letras restantes: {len(word)}\nTentativas restantes: {life}")
-    print(f"Acertos: {c_letter}\nErros:   {w_letter}")
+    print(f"Letras restantes: {len(word) - len(c_letter)}" # calcula as letras restantes
+          f"\nTentativas restantes: {life}")
+
+    print(f"Acertos: {c_letter}\n"
+          f"Erros:   {w_letter}")
 
     print(f"\nPalavra sercreta: ", end="")
     for n in s_word:print(f"{n}",end="")
@@ -35,8 +38,8 @@ while not end:
             if letter == word[i]:
                 s_word[i] = word[i]
     else:
-        if not letter in w_letter:
-            w_letter.append(letter)
+        if not letter in w_letter: # Verifica se a letra ja esta foi errada para não tirar vidas
+            w_letter.append(letter) # adiciona a letra a variavel de letras erradas
             life = life - 1
 
 
@@ -48,5 +51,5 @@ while not end:
     elif life == 0: # Se a nossa vida está zerada
         print("---------- Que pena, você perdeu. ----------")
         print("A palavra era: ", end="")
-        for n in word: print(f"{n}", end="")
+        for n in word: print(f"{n}", end="") # itera a a palavra escolhida para mostrar na tela
         end = True

@@ -4,7 +4,7 @@ nums = []
 end = False
 
 while(not end):
-    num = input("Qual o número: ")
+    num = input("Qual o número: ") # Armazena o input do usuário e converte para inteiro
 
     if num == '':
         end = True
@@ -13,4 +13,4 @@ while(not end):
     else:
         print("Apenas números.")
 
-print(f"A soma de todos os números é {sum(nums)}")
+print(f"A soma de todos os números é {sum(nums)}") # Retorna a soma de todos os números do array

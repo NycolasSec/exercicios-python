@@ -1,7 +1,7 @@
 
 print('Escolha um número e eu irei calcular o fatorial dele.\n')
 
-numero = int(input('Digite um número (Inteiro): '))
+numero = int(input('Digite um número (Inteiro): ')) # Recebe o número do usuário e converte em inteiro
 
 resultado = 1
 

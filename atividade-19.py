@@ -25,7 +25,7 @@ def ad_cliente():
         print("Escolha entre:"
               "\n[M] - Masculino"
               "\n[F] - Feminino")
-        sexo = input(": ").lower()
+        sexo = input(": ").lower() # captura o nome do cliente e transforma em minúsculas
 
     # Idade do cliente
     idade = input(f"Qual a idade do cliente.\n: ")
@@ -37,13 +37,13 @@ def ad_cliente():
 
 def del_cliente():
     nome = input(f"Qual o nome do cliente a ser deletado?\n: ")
-    while not nome in clientes.keys() or nome == '':
+    while not nome in clientes.keys() or nome == '': # verifica se o nome do cliente é válido
         nome = input("Cliente não existe ou nulo. Escolha outro nome\n: ")
 
     clientes.pop(nome)
 
 
-while not end:
+while not end: # Define o término do programa
     print("\n\nQual ação pretende tomar agora?"
           "\n[0] - Ver clientes atuais."
           "\n[1] - Adicionar cliente."
